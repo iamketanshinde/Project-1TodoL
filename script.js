@@ -22,8 +22,12 @@ function addTask(){
 }
 function editTask(index){
 const newTask= prompt('Enter a task:');
-if(newTask!==null){
-    tasks[index].task=newTask.trim();
-    renderTasks();
+    if(newTask!==null){
+        tasks[index].task=newTask.trim();
+        renderTasks();``
+    }
 }
+function completeTask(index){
+    tasks[index].complete=!tasks[index].complete;
+    renderTasks();
 }
