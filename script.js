@@ -20,3 +20,10 @@ function addTask(){
     document.getElementById('taskInput').value='';
     renderTasks();
 }
+function editTask(index){
+const newTask= prompt('Enter a task:');
+if(newTask!==null){
+    tasks[index].task=newTask.trim();
+    renderTasks();
+}
+}
