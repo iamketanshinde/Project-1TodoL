@@ -13,3 +13,10 @@ function renderTasks(){
     <tr>
     `).join();
 }
+function addTask(){
+    const taskInput= document.getElementById('taskInput').Value.trim();
+    if(!taskInput)return;
+    tasks.push({task:taskInput,complete:false});
+    document.getElementById('taskInput').value='';
+    renderTasks();
+}
